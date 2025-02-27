@@ -1,4 +1,5 @@
 //Kiana Tjon - 2/25/25 - this is a file that will isolate what place each digit is in
+import java.util.Scanner;
 public class Digits{
     public static void main(String[] args) {
         int num;
@@ -6,7 +7,10 @@ public class Digits{
         int tens;
         int ones;
         int thousands;
-        num = 1258;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a four digit number");
+        num = input.nextInt();
         ones = num%10;
         tens = (num/10)%10;
         hundreds = (num/100)%10;
