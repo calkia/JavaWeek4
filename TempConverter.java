@@ -2,7 +2,6 @@
 
 import java.util.*;
 
-import javax.swing.event.SwingPropertyChangeSupport;
 public class TempConverter {
     public static void main(String[] args) {
     double Fahrenheit;
@@ -10,7 +9,7 @@ public class TempConverter {
     Scanner input = new Scanner(System.in);
     System.out.println("Enter Fahrenheit temp: ");
     Fahrenheit = input.nextDouble();
-    Celsius = 5/9*(Fahrenheit-32);
+    Celsius = 5.0/9.0*(Fahrenheit-32.0);
     System.out.println("Your Celsius temp is: "+ Celsius);
     }
     
