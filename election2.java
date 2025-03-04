@@ -5,35 +5,51 @@ import java.util.*;
 
 public class election2 {
     public static void main(String[] args) {
-        String Canidate1;
-        String Canidate2;
-        int AwbNY = 314159;
-        int AwbNJ = 89008;
-        int AwbCT = 213451;
-        int MartNY = 271860;
-        int MartNJ = 121032;
-        int MartCT = 231034;
-        int AwbTotal;
-        int MartTotal;
-        int Total;
-        double AwbPercent;
-        double MartPercent;
+        String canidate1;
+        String canidate2;
+        int can1NY;
+        int can1NJ;
+        int can1CT;
+        int can2NY;
+        int can2NJ;
+        int can2CT;
+        int can1Total;
+        int can2Total;
+        int total;
+        double can1Percent;
+        double can2Percent;
 
         Scanner input = new Scanner(System.in);
-        System.out.print("Who is the first canidate? ");
-        Canidate1 = input.nextLine();
-        System.out.print("Who is the second canidate? ");
-        Canidate2 = input.nextLine();
+        System.out.print("Who is the first canidate? ");//Awbrey
+        canidate1 = input.nextLine();
+        System.out.print("What are their New York Votes? ");
+        can1NY = input.nextInt();
+        System.out.print("What are their New Jersey Votes? ");
+        can1NJ = input.nextInt();
+        System.out.print("What are their Connecticut Votes? ");
+        can1CT = input.nextInt();
+        input.nextLine();
+        System.out.print("Who is the second canidate? ");//Martinez
+        canidate2 = input.nextLine();
+        System.out.print("What are their New York Votes? ");
+        can2NY = input.nextInt();
+        System.out.print("What are their New Jersey Votes? ");
+        can2NJ = input.nextInt();
+        System.out.print("What are their Connecticut Votes? ");
+        can2CT = input.nextInt();
+
+        input.close();
 
 
-        AwbTotal = AwbNY + AwbNJ + AwbCT;
-        MartTotal = MartNY + MartNJ + MartCT;
-        Total = AwbTotal+MartTotal;
-        AwbPercent = ((double)AwbTotal/(double)Total)*100;
-        MartPercent = ((double)MartTotal/(double)Total)*100;
+        can1Total = can1NY + can1NJ + can1CT;
+        can2Total = can2NY + can2NJ + can2CT;
+        total = can1Total+can2Total;
+        can1Percent = ((double)can1Total/(double)total)*100;
+        can2Percent = ((double)can2Total/(double)total)*100;
 
         System.out.println("Canidate\t\tVotes\tPercentage");
-        System.out.println(Canidate1+"\t\t\t"+AwbTotal +"\t"+AwbPercent);
-        System.out.println(Canidate2+"\t\t"+MartTotal +"\t"+MartPercent);
+        System.out.println(canidate1+"\t\t\t"+can1Total +"\t"+can1Percent);
+        System.out.println(canidate2+"\t\t"+can2Total +"\t"+can2Percent);
+        System.out.println("TOTAL VOTES: \t\t"+total);
     }
 }
