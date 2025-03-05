@@ -1,5 +1,6 @@
 //Kiana Tjon - 3/4/25 - election
 import java.util.*;
+import java.text.*;
 // Aubrey NY: 314159 - NJ: 89008 - CT: 213451
 // Martinez: NY: 271860 - NJ: 121032 - CT: 231034 
 
@@ -44,12 +45,14 @@ public class election2 {
         can1Total = can1NY + can1NJ + can1CT;
         can2Total = can2NY + can2NJ + can2CT;
         total = can1Total+can2Total;
-        can1Percent = ((double)can1Total/(double)total)*100;
-        can2Percent = ((double)can2Total/(double)total)*100;
+        //can1Percent = ((double)can1Total/(double)total);
+        can1Percent = .43;
+        can2Percent = ((double)can2Total/(double)total);
 
+        NumberFormat percent = NumberFormat.getPercentInstance();
         System.out.println("Canidate\t\tVotes\tPercentage");
-        System.out.println(canidate1+"\t\t\t"+can1Total +"\t"+can1Percent);
-        System.out.println(canidate2+"\t\t"+can2Total +"\t"+can2Percent);
+        System.out.println(canidate1+"\t\t\t"+can1Total +"\t"+percent.format(can1Percent));
+        System.out.println(canidate2+"\t\t"+can2Total +"\t"+percent.format(can2Percent));
         System.out.println("TOTAL VOTES: \t\t"+total);
     }
 }
