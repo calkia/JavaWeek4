@@ -45,8 +45,7 @@ public class election2 {
         can1Total = can1NY + can1NJ + can1CT;
         can2Total = can2NY + can2NJ + can2CT;
         total = can1Total+can2Total;
-        //can1Percent = ((double)can1Total/(double)total);
-        can1Percent = .43;
+        can1Percent = ((double)can1Total/(double)total);
         can2Percent = ((double)can2Total/(double)total);
 
         NumberFormat percent = NumberFormat.getPercentInstance();
